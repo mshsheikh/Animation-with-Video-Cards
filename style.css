@@ -110,12 +110,12 @@ body {
 
 @media (max-width: 480px) {
   .card {
-    width: 90px;
-    height: 120px;
+    width: 120px;
+    height: 160px;
   }
 
   .card:hover {
-    height: 240px;
+    height: 260px;
   }
 
   .content {
