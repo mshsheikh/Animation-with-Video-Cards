@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f0f0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.card {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  background: #333;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  height: 400px;
+}
+
+.card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  filter: brightness(0.6);
+  transition: filter 0.3s ease;
+}
+
+.card:hover video {
+  filter: brightness(1);
+}
+
+.card .content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .content {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 120px;
+    height: 160px;
+  }
+
+  .card:hover {
+    height: 320px;
+  }
+
+  .content {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100px;
+    height: 140px;
+  }
+
+  .card:hover {
+    height: 280px;
+  }
+
+  .content {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 90px;
+    height: 120px;
+  }
+
+  .card:hover {
+    height: 240px;
+  }
+
+  .content {
+    font-size: 0.7rem;
+  }
+}
